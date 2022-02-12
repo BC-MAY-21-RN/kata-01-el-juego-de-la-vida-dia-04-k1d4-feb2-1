@@ -1,5 +1,5 @@
 const Cell = require('./Cell');
-class Grid {
+module.exports = class Grid {
   constructor(rows, columns) {
     this.rows = rows;
     this.columns = columns;
@@ -46,6 +46,4 @@ class Grid {
       matrizText = '';
     }
   }
-}
-const myGrid = new Grid(4, 5);
-myGrid.printGrid();
+};
