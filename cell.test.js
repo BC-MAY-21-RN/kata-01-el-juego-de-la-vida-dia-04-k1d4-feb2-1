@@ -1,10 +1,20 @@
 /* eslint-disable no-undef */
-const Cell = require('./Cell');
+const Grid = require('./Grid');
 
-describe('Cell', () => {
-  const cell = new Cell(2, 2);
+const myGrid = new Grid(4, 8);
+let matriz = myGrid.matriz;
+
+describe('Status siguiente', () => {
+  let myCellOne = matriz[1][3];
+  let myCellTwo = matriz[2][3];
+
+  myCellOne.liveNeighbors = myCellOne.countLiveNeighbors(matriz);
+  myCellTwo.liveNeighbors = myCellTwo.countLiveNeighbors(matriz);
 
   test('defines getStatus', () => {
-    expect(cell.getStatus).not.toBeNull();
+    expect(myCellOne.nextStatus()).toBe(1);
+  });
+  test('defines getStatus', () => {
+    expect(myCellTwo.nextStatus()).toBe(1);
   });
 });
