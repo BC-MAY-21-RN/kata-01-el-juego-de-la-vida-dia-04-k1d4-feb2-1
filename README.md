@@ -46,6 +46,8 @@ Generation 2:
 ...**...
 ........
 ```
+![Resultado](img/res.JPG)
+
 ## Requerimientos no funcionales
 - Calidad
   - Utilizar estilo de código definido por la comunidad (apoyarse en ESLint)
